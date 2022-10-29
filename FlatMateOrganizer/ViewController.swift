@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
-
-
+    
+    @IBOutlet weak var ZalogujSięLabel: UILabel!    //Textfield "Zaloguj się"
+    @IBAction func SignInButton(_ button: UIButton){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondController = storyboard.instantiateViewController(withIdentifier: "secondController") as! SecondViewController
+        self.navigationController?.pushViewController(secondController, animated: true)
+    }
+    
+    
+    
 }
-
