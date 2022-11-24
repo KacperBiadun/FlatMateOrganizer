@@ -23,5 +23,9 @@ class ViewController: UIViewController{
     }
     
     
-    
+    @IBAction func continueWithoutLogInButton(_ sender: Any) {
+        let storyboard2 = UIStoryboard(name: "Main", bundle: nil)
+        let thirdController = storyboard2.instantiateViewController(withIdentifier: "thirdController") as! ThirdViewController
+        self.navigationController?.pushViewController(thirdController, animated: true)
+    }
 }
